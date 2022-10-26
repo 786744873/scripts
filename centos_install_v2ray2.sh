@@ -306,7 +306,7 @@ getCert() {
 
 installV2ray() {
     colorEcho $BLUE " 安装v2ray..."
-    bash <(curl -sL ${V6_PROXY}https://raw.githubusercontent.com/hijkpw/scripts/master/goV2.sh)
+    bash <(curl -sL ${V6_PROXY}https://raw.githubusercontent.com/786744873/scripts/master/goV2.sh) --version v4.45.2
 
     if [[ ! -f $CONFIG_FILE ]]; then
         colorEcho $RED " $OS 安装V2ray失败，请到 https://hijk.art 网站反馈"
