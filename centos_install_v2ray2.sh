@@ -127,7 +127,8 @@ getData() {
         CERT_FILE="/etc/v2ray/${DOMAIN}.pem"
         KEY_FILE="/etc/v2ray/${DOMAIN}.key"
     else
-        resolve=`curl -sL https://hijk.art/hostip.php?d=${DOMAIN}`
+        # resolve=`curl -sL https://hijk.art/hostip.php?d=${DOMAIN}`
+        resolve=`curl -sL ipget.net/?ip=${DOMAIN}`
         res=`echo -n ${resolve} | grep ${IP}`
         if [[ -z "${res}" ]]; then
             colorEcho ${BLUE}  "${DOMAIN} 解析结果：${resolve}"
